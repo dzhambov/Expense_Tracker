@@ -34,7 +34,7 @@ function addTransaction(e) {
 
     updateValues();
 
-    updateLocalStorage();
+    undateLocalStorage();
 
     text.value = "";
     amount.value = "";
@@ -83,9 +83,9 @@ function updateValues() {
     -1
   ).toFixed(2);
 
+  balance.innerText = `$${total}`;
   moneyPlus.innerText = `$${income}`;
   moneyMinus.innerText = `$${expense}`;
-  balance.innerText = `$${total}`;
 }
 
 //  Remove transaction by ID
